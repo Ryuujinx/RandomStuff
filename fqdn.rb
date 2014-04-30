@@ -7,7 +7,7 @@ File.open("test-fqdn.txt","r") do |f|
                 elsif arr.count == 2
                         if line =~ /^.*\.(com|org|net)$/
                                 puts "#{line.gsub("\n","")} is an FQDN not ending in a dot."
-                        elsif line =~ /^.*\.(com|org|net)$/
+                        elsif line =~ /^.*\.(com|org|net)\.$/
                                 puts "#{line.gsub("\n","")} is an FQDN ending in a dot."
                         else
                                 puts "#{line.gsub("\n","")} is not an FQDN."
